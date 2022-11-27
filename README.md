@@ -67,12 +67,14 @@ This repository contains the following files and directories:
 └── README.md
 ```
 
- - `data/`: Contains the raw data set and consists of the subfolders `song_data/` and `log_data/` which were descibed [above](#the-raw-data).
+ - `data/`: Contains a subset of the raw data set for local experimentation.
 
- - `dl.cfg`: The Jupyter notebook file which is used for discovery and experimentation.
+ - `output/`: A target folder for the output, when experimenting locally.
+
+ - `dl.cfg`: Contains the AWS credentials.
 
  - `etl.ipynb`: The Jupyter notebook file which is used for discovery and experimentation.
 
- - `etl.py`: `process_song_file()` `process_log_file()` `process_data()`. Finally, the `main()`-function knits everything together.
+ - `etl.py`: Reads data from S3, processes the data using Spark, and writes them back to S3.
 
  - `README.md`: The file you are currently reading.
